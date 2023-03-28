@@ -1,0 +1,204 @@
+
+/*---TIPOGRAFIA-----*/
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/*---Movimiento de bienvenidos-----*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+.waviy
+{
+  text-align: center;
+}
+.waviy h5
+{
+  padding-top: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+.waviy span 
+{
+  color: #e595c5;
+  padding-top: 80px;
+  font-family: 'Alfa Slab One', cursive;
+  display: inline-block;
+  animation: waviy 2.5s infinite;
+  animation-delay: calc(.1s * var(--i));
+  font-size: 15px;
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+@media only screen and (min-width: 576px)
+{
+  .waviy span
+  {
+    font-size: 30px;
+  }
+}
+.btn-delete
+{
+  background-color: #ffe7e7;
+  color: #ff5252;
+}
+.btn-edit
+{
+  background-color: #ccf5ff;
+  color: gray;
+}
+#btn-task-form
+{
+  background-color: #ffe7f5;
+}
+#ventana
+{
+  background-color: #e7ebff;
+}
+#mensaje
+{
+  color: grey;
+}
+#carouselExampleAutoplaying
+{
+  width: 125%;
+  margin-top: 40px;
+  margin-left: -20px;
+}
+@media only screen and (min-width: 576px)
+{
+  #carouselExampleAutoplaying
+  {
+    width: 100%;
+  }
+}
+/*------------------------------------------------------------------------*/
+
+body 
+{
+  background: #fceef7;
+}
+@media only screen and (min-width: 768px)
+{
+  body {
+    background:  #ffe8e3;
+  }
+  
+}
+#publicaciones
+{
+  height: 310px;
+  overflow: auto;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px)
+{
+  #publicaciones
+  {
+    margin-top: 0;
+  }
+}
+nav
+{
+  background-image: linear-gradient(to right, #fdf3c8, #feb7e2);
+}
+#inicio
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor
+{
+  font-family: 'Indie Flower', cursive;
+  padding: 60px;
+}
+.contenedor h2
+{
+  color: #e595c5;
+}
+#tasks-container li
+{
+  background-color: #e9ffee;
+ 
+}
+#adicional
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#adicional
+{
+  font-size: 25px;
+  
+  font-family: 'Indie Flower', cursive;
+  padding-top: 20px;
+  text-align: center;
+  color: #686f94;
+}
+@media only screen and (min-width: 768px)
+{
+  #adicional
+  {
+    padding-top: 50px;
+    font-size: 40px;
+    color: #636467;
+  }
+  
+}
+/*---------Balla de desplazamiento-----------*/
+/* For the "inset" look only */
+html {
+  overflow: auto;
+}
+body {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  bottom: 5px;
+  right: 20px;
+  padding: 30px; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  -webkit-border-radius: 5px;
+  background: #b9f6ee; 
+
+  -webkit-box-shadow: inset 0 0 6px #3a3a3a79; 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+background: #e8ccf7; 
+}
+/*----------------------------------------------*/
+#sesion
+{
+  background-image: linear-gradient(to right,  #ffdbe1, #d2ffef);
+}
+#registro
+{
+  background-image: linear-gradient(to right, #ffdbe1, #d2ffef);
+}
+h3
+{
+  color: gray;
+}
+#entrar
+{
+  background-color: #ff898932;
+}
+#guardar
+{
+  background-color: #ff898932;
+}

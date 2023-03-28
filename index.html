@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo.ico">
+    <title>Innova Web</title>
+
+  <!-- BOOSTRAP CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="./main.css">
+  
+</head>
+<body>
+
+<!----------------------- Barra de Navegación ---------------------------------------------------->
+  <nav class="navbar navbar-expand-md bg-light navbar-light navbar fixed-top bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="https://cdn-icons-png.flaticon.com/512/6604/6604944.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Innova Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+
+          <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828426.png" width="25"> Iniciar Sesión</a>
+          <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828434.png" width="25"> Registrarse</a>
+          <a class="nav-link logged-in" href="#" id="logout"> <img src="https://cdn-icons-png.flaticon.com/512/891/891372.png" width="25"> Cerrar Sesión</a>
+          
+          <a class="nav-link logged-out " href="#" id="google"><img src="https://cdn-icons-png.flaticon.com/512/2875/2875331.png" width="25"></a>
+      
+        </div>
+      </div>
+    </div>
+  </nav>
+<!------------------------------------------------------------------------------------------------>
+<!-------------Cuadricula para el contenido de la pagina de bienvenida------------------------>
+
+  <div class="contanier p-4 logged-out"> 
+    <div class="row">
+       <!----------Primera columna--------------------------------------------------->
+       <div class="col-12  col-md-7" > 
+
+
+          <!--- Plantilla de un carrusel bootstrap -->
+
+          <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Fotos/foto1.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto2.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto3.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto4.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto5.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto6.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto7.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto8.jpg" class="d-block w-100" >
+              </div>
+              <div class="carousel-item">
+                <img src="Fotos/foto9.jpg" class="d-block w-100" >
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+<!--------------------------------------------------------------------------------------->
+
+      <!---------------Segunda columna-------------------------------------------------------->
+      <div class="col-12 col-md-5" id="inicio">
+
+        <div class="waviy">
+          <span style="--i:1">B</span>
+          <span style="--i:2">I</span>
+          <span style="--i:3">E</span>
+          <span style="--i:4">N</span>
+          <span style="--i:5">V</span>
+          <span style="--i:6">E</span>
+          <span style="--i:7">N</span>
+          <span style="--i:8">I</span>
+          <span style="--i:9">D</span>
+          <span style="--i:10">O</span>
+          <span style="--i:11">S</span>
+
+          <h5>Este es un espacio de donde podras conectar con 
+            distintas personas y compartir momentos.</h5>
+       
+        </div>
+      </div>
+
+    </div>
+</div>
+<!-------------------------------------------------------------------------------------------------->
+
+<!-- CRUD -->
+
+<!-- ADD TASK (CREAR PUBLICACION) -->
+<div class="container p-4">
+  <div class="row">
+    <div class="col-12         col-md-5">
+      <div class="card" id="ventana">
+        <div class="card-body">
+          <h1 class="h4" id="mensaje">Crear publicación</h1>
+          <form id="task-form">
+            <label for="title" id="editar-titulo">Titulo:</label>
+            <input
+              type="text"
+              id="task-title"
+              class="form-control mb-3"
+              class="My First Title"
+              placeholder="Task Title"
+              autofocus>
+            <label for="description">Descripcion:</label>
+            <textarea
+              id="task-description"
+              rows="3"
+              class="form-control mb-3"
+              placeholder="Escribir tarea o nota aqui"
+            ></textarea>
+            <button class="btn" id="btn-task-form">Publicar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class=" col-md-2  d-none d-md-block ">
+      <br><br>
+      <img src="Fotos/flecha.gif" class="img-fluid logged-in">
+
+    </div>
+
+    <div class="col-12   col-md-5">
+      <div class="container " >
+      <div class="row">
+        <div class="col-md-12 offset-md-1 logged-in" id="publicaciones">
+          <ul class="list-group" id="tasks-container">
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+  </div>
+</div>
+
+
+<!--  fin de CRUD -->
+  
+
+
+  <!-- Primera plantilla Modal para crear nuevos usuarios --------------------->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="registro">
+        <div class="modal-header">
+          <h3>Crear nueva cuenta</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-5">
+          <form id="signup-form">
+
+            <label for="email"> Correo Electronico:</label>
+            <input type="text" id="signup-email" class="form-control mb-3" placeholder="Correo" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="signup-password" class="form-control mb-3" placeholder="Contraseña" required>
+
+            <button type="submit" class="btn w-100" id="guardar">Guardar Cambios</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventanas Emergentes ---------------------------------------------------------->
+  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="sesion">
+        <div class="modal-header">
+          <h3>Iniciar Sesión</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <label for="email">Correo Electronico</label>
+            <input type="text" id="login-email" class="form-control mb-3" placeholder="Correo" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="login-password" class="form-control mb-3" placeholder="Contraseña" required>
+
+            <button type="submit" class="btn w-100 mb-4" id="entrar">Entrar</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="adicional" class="logged-in">
+
+      <h5 id="adicional">"Comparte tu emociones y pensamientos acerca de tus mejores momentos".</h5>
+
+    </div>
+</div> 
+ <!---------- SCRIPTS ------------------------------>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Toastify js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./principal.js" type="module"></script>
+     
+</body>
+</html>

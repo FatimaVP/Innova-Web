@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <title>Page Not Found</title>
+  </head>
+  <body>
+
+    <li class="list-group-item list-group-item-action mt-2">
+      <img src="Fotos/check.gif" width="50px">
+      
+      <h5>${task.title}</h5>
+      <p>${task.description}</p>
+      <div>
+       <button class="btn btn-delete" data-id="${doc.id}">
+       Eliminar
+      </button>
+      <button class="btn btn-edit" data-id="${doc.id}">
+       Editar
+      </button>
+      </div>
+      
+      </li>
+
+  </body>
+</html>
